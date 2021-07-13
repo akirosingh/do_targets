@@ -1,9 +1,10 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
 summ|function|725b50cbf04a3ed2||||||||||||||
-raw_genotypes|stem|d3dd4e21ad0044aa|ce09c4ca03247048|373d10e7f86313d6|-1041539108|_targets/objects/raw_genotypes|6284ce439d01e434|d30bf9e9a671aecd|117141848|rds|vector|||55.181||
-markers|stem|8a1932c82bbd2278|a979193bceed19f4|b6812aad882fd0e8|-724854595|_targets/objects/markers|9d66e544f87b38ac|de359b3708af8a9b|3436361|rds|vector|||1.094||
-phenotypes|stem|0159568d0a90c3a1|73bb16f7a0782279|c98ff51a142c3b0a|1358501158|_targets/objects/phenotypes|88e73ead4b00c50c|20023137bf15629f|443477|rds|vector|||0.503||
-genofile|stem|897ab8ff7114427c|b2fc6bde4496bbdc|4743de3b13433140|-749698187|_targets/objects/genofile|30948c80f2fa4f7f|a1eb1e9c5e5e0058|110499166|rds|vector|||135.396||
+.Random.seed|object|03a5338e016c81c7||||||||||||||
+raw_genotypes|stem|faf2551aaead0694|ce09c4ca03247048|373d10e7f86313d6|-1041539108||t18821.9659595159s|94e65ac8e85efa72|117141853|rds|vector|||25.66||
+markers|stem|8a1932c82bbd2278|a979193bceed19f4|b6812aad882fd0e8|-724854595||t18821.9601002312s|1185dd798737880b|3436361|rds|vector|||1.094||
+phenotypes|stem|0159568d0a90c3a1|73bb16f7a0782279|c98ff51a142c3b0a|1358501158||t18821.9601002312s|d5b5c1849f215f49|443477|rds|vector|||0.503||
+genofile|stem|3133621353b76413|b2fc6bde4496bbdc|7a67d24d69638d38|-749698187||t18821.9697691747s|2707557758e56adc|110499171|rds|vector|||213.07||
 get_sampleindex|function|30248cbeff7e811a||||||||||||||
 create_genofile|function|a0d77529ff756b96||||||||||||||
 get_rawphenotypes|function|0be6adac9faa1f8a||||||||||||||
@@ -17,7 +18,7 @@ create_fig4|function|f36716b7a96e702d||||||||||||||
 calculate_phenotypes|function|eb0121e801f67d08||||||||||||||
 create_pmapfile|function|da3bcb9fd5020532||||||||||||||
 create_fig5|function|f36716b7a96e702d||||||||||||||
-create_foundergenofile|function|8e4605385222ee65||||||||||||||
+create_foundergenofile|function|8df60f0ce9ad9c88||||||||||||||
 create_supfig1|function|f36716b7a96e702d||||||||||||||
 get_pmap|function|f36716b7a96e702d||||||||||||||
 get_phenocovar|function|f36716b7a96e702d||||||||||||||
@@ -27,46 +28,15 @@ get_rawcovar|function|f36716b7a96e702d||||||||||||||
 create_gmapfile|function|2baa53ae3f7a0dc5||||||||||||||
 get_rawfoundergenotypes|function|f36716b7a96e702d||||||||||||||
 create_control|function|a287753f62e16609||||||||||||||
-.Random.seed|object|03a5338e016c81c7||||||||||||||
 get_rawgenotypes|function|8cb682ba89b1aa55||||||||||||||
 get_markers|function|035adcba37f280cd||||||||||||||
-raw_phenotypes|stem|4e90252012f4a8e4|18a49a4930c90373|ca3f4f412473b282|-1203725246|_targets/objects/raw_phenotypes|9d5d2c74b3ae3c25|89f9d05a661e551d|77991|rds|vector|||0.163||
-array_id|stem|a5949def11613afe|936272e7f2aab790|b32ea59ac8021c48|139331879|_targets/objects/array_id|7e52d4aab90582f1|b7fddb658ba3f094|4100|rds|vector|||0.023||
-sample_index|stem|e788aa46ba3016c9|3e80e02554aabdf0|8541aeb62a76f3c0|851136725|_targets/objects/sample_index|22cf8647f6d52ec5|fefb002adc6194b0|2728|rds|vector|||0.019||
-controlfile|stem|bcf9cf8c41e812e3|c681de065cad158c|a4d32bb0a6e3e28f|733022598|_targets/objects/controlfile|fe79f6085b67020a|e5fb87cf4b4e62cf|393|rds|vector|||0.015||
-phenofile|stem|da626207fd6f7f3c|0ed7df5f069be4e2|9b513c0878570646|-1851397230|_targets/objects/phenofile|0fa723a3f3838b6d|2a8869f2435f83e9|47|rds|vector|||0.387|no nonmissing arguments to min returning Inf|
-foundergenofile|stem|da626207fd6f7f3c|d2e652b69d00d02d|b9683d86040a48be|814477400|_targets/objects/foundergenofile|102b6f42956c3642|2a8869f2435f83e9|47|rds|vector|||254.136||
-gmapfile|stem|da626207fd6f7f3c|0b7cec6908b5595b|fd68aa7301f3ef6b|-1487799944|_targets/objects/gmapfile|b90c656dc2990971|2a8869f2435f83e9|47|rds|vector|||0.575||
-pmapfile|stem|da626207fd6f7f3c|c3a455b5ba3acd83|0a9a3d90ccf5d360|-383785588|_targets/objects/pmapfile|a2a5f7a35bcbec11|2a8869f2435f83e9|47|rds|vector|||0.537||
-get_sampleindex|function|30248cbeff7e811a
-create_genofile|function|a0d77529ff756b96
-get_rawphenotypes|function|0be6adac9faa1f8a
-get_gmap|function|f36716b7a96e702d
-get_arrayid|function|4dee8d882cde2aa9
-create_fig1|function|b525793cb014d18b
-create_fig2|function|0db655bfc1bab7d2
-create_fig3|function|f36716b7a96e702d
-create_phenotypes|function|be22da68b2680c4c
-create_fig4|function|f36716b7a96e702d
-calculate_phenotypes|function|eb0121e801f67d08
-create_pmapfile|function|da3bcb9fd5020532
-create_fig5|function|f36716b7a96e702d
-create_foundergenofile|function|8df60f0ce9ad9c88
-create_supfig1|function|f36716b7a96e702d
-get_pmap|function|f36716b7a96e702d
-get_phenocovar|function|f36716b7a96e702d
-create_supfig2|function|f36716b7a96e702d
-zip_datafiles|function|61bd41823e972caf
-get_rawcovar|function|f36716b7a96e702d
-create_gmapfile|function|2baa53ae3f7a0dc5
-get_rawfoundergenotypes|function|f36716b7a96e702d
-create_control|function|a287753f62e16609
-get_rawgenotypes|function|8cb682ba89b1aa55
-get_markers|function|035adcba37f280cd
-raw_phenotypes|stem|4e90252012f4a8e4|18a49a4930c90373|ca3f4f412473b282|-1203725246|_targets/objects/raw_phenotypes|9d5d2c74b3ae3c25|89f9d05a661e551d|77991|rds|vector|||0.163||
-array_id|stem|a5949def11613afe|936272e7f2aab790|b32ea59ac8021c48|139331879|_targets/objects/array_id|7e52d4aab90582f1|b7fddb658ba3f094|4100|rds|vector|||0.023||
-sample_index|stem|e788aa46ba3016c9|3e80e02554aabdf0|8541aeb62a76f3c0|851136725|_targets/objects/sample_index|22cf8647f6d52ec5|fefb002adc6194b0|2728|rds|vector|||0.019||
-controlfile|stem|bcf9cf8c41e812e3|c681de065cad158c|a4d32bb0a6e3e28f|733022598|_targets/objects/controlfile|fe79f6085b67020a|e5fb87cf4b4e62cf|393|rds|vector|||0.015||
-phenofile|stem|da626207fd6f7f3c|0ed7df5f069be4e2|9b513c0878570646|-1851397230|_targets/objects/phenofile|0fa723a3f3838b6d|2a8869f2435f83e9|47|rds|vector|||0.387|no nonmissing arguments to min returning Inf|
-gmapfile|stem|da626207fd6f7f3c|0b7cec6908b5595b|fd68aa7301f3ef6b|-1487799944|_targets/objects/gmapfile|b90c656dc2990971|2a8869f2435f83e9|47|rds|vector|||0.575||
-pmapfile|stem|da626207fd6f7f3c|c3a455b5ba3acd83|0a9a3d90ccf5d360|-383785588|_targets/objects/pmapfile|a2a5f7a35bcbec11|2a8869f2435f83e9|47|rds|vector|||0.537||
+raw_phenotypes|stem|4e90252012f4a8e4|18a49a4930c90373|ca3f4f412473b282|-1203725246||t18821.9601002312s|1a7406bdcb451e74|77991|rds|vector|||0.163||
+array_id|stem|a5949def11613afe|936272e7f2aab790|b32ea59ac8021c48|139331879||t18821.9600998692s|ec682fd84ed717d9|4100|rds|vector|||0.023||
+sample_index|stem|e788aa46ba3016c9|3e80e02554aabdf0|8541aeb62a76f3c0|851136725||t18821.9601002312s|5c097f9ae171caac|2728|rds|vector|||0.019||
+controlfile|stem|bcf9cf8c41e812e3|c681de065cad158c|a4d32bb0a6e3e28f|733022598||t18821.9600998692s|8092608347162eca|393|rds|vector|||0.015||
+phenofile|stem|da626207fd6f7f3c|0ed7df5f069be4e2|9b513c0878570646|-1851397230||t18821.9601002312s|2280291f19f9eba1|47|rds|vector|||0.387|no nonmissing arguments to min returning Inf|
+foundergenofile|stem|283e05ea500bae6f|d2e652b69d00d02d|132eb0f937d6909e|814477400||t18821.9716651522s|1a1294f3d72cfc2f|48|rds|vector|||160.08||
+gmapfile|stem|283e05ea500bae6f|0b7cec6908b5595b|60a572c2535167fb|-1487799944||t18821.9697920461s|1a1294f3d72cfc2f|48|rds|vector|||1.65||
+pmapfile|stem|283e05ea500bae6f|c3a455b5ba3acd83|3840c56a2e6b7676|-383785588||t18821.969812268s|1a1294f3d72cfc2f|48|rds|vector|||1.75||
+create_zipfile|stem|19f475ca01d3f111|cc474040b6ed4f7f|55d5b258ee451d93|923438168||t18821.9736871742s|f2000359ad1073b7|131|rds|vector|||0.02|zip not found|
+do_malaria|stem||5e886f53540c2f06|0fefc6b5ab5aa34b|151037089||||0|rds|vector|||0||file CUsersSchneider LabDocumentsGitHubdo_targetsdataprepared_datado_malaria.zip does not exist.
