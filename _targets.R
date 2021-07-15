@@ -1,5 +1,5 @@
 library(targets)
-
+memory.limit(100000)
 source("./packages.R")
 
 ## Load your R files
@@ -27,12 +27,12 @@ list(
   tar_target(create_zipfile, zip_datafiles(genofile,gmapfile,pmapfile,foundergenofile,phenofile,controlfile)),
   tar_target(do_malaria, read_cross2(create_zipfile)),
   tar_target(Xcovar,get_x_covar(do_malaria)),
-  tar_target(map, insert_pseudomarkers(do_malaria$gmap, step=1))#,
-  # tar_target(pr, calc_genoprob(do_malaria,map, quiet=FALSE,  error_prob=0.002)),
-  # tar_target(apr, genoprob_to_alleleprob(pr)),
-  # tar_target(kinship, calc_kinship(apr, type= "overall", omit_x=FALSE, use_allele_probs= TRUE, quiet=FALSE)),
-  # tar_target(scan, scan1(pr, do_malaria$pheno, Xcovar=Xcovar))
-  # tar_target(permutations, scan1perm(pr, do_malaria$pheno, Xcovar=Xcovar, n_perm=1)),
+  tar_target(map, insert_pseudomarkers(do_malaria$gmap, step=1)),
+  tar_target(pr, calc_genoprob(do_malaria,map, quiet=FALSE,  error_prob=0.002)),
+  tar_target(apr, genoprob_to_alleleprob(pr)),
+  tar_target(kinship, calc_kinship(apr, type= "overall", omit_x=FALSE, use_allele_probs= TRUE, quiet=FALSE)),
+  tar_target(scan, scan1(pr, do_malaria$pheno, Xcovar=Xcovar)),
+  tar_target(permutations, scan1perm(pr, do_malaria$pheno, Xcovar=Xcovar, n_perm=1))#,
   # # The individual parental contribution need to be calculated for each phenotype as well as the gene contributions.
   # tar_target(fig1, create_fig1(phenotypes)),
   # tar_target(fig2, create_fig2(phenotypes)),

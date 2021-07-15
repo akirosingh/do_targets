@@ -1,5 +1,2 @@
 name|type|parent|branches|progress
-create_zipfile|stem|create_zipfile|0|started
-create_zipfile|stem|create_zipfile|0|built
-do_malaria|stem|do_malaria|0|started
-do_malaria|stem|do_malaria|0|errored
+pr|stem|pr|0|started

@@ -1,0 +1,64 @@
+---
+title: "ChromPlot!"
+author: "Adam Kirosingh"
+date: "8/13/2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("biomaRt")
+library(chromPlot)
+install.packages("RSQLite")
+install.packages("tibble")
+
+lapply(paste('package:',names(sessionInfo()$otherPkgs),sep=""),detach,character.only=TRUE,unload=TRUE)
+
+```
+
+## Starting with Mouse Genome
+
+```{r First Example}
+
+data(mm10_gap)
+data_file4 <-system.file("extdata", "mm10_refGeneChr2-11-17-19.txt", package= "chromPlot")
+data_file12 <-system.file("extdata", "QTL.csv", package = "chromPlot")
+qtl2 <-read.table(data_file12, sep=",", header =TRUE,stringsAsFactors=FALSE)
+ref_mm10 <-read.table(data_file4, sep="\t", stringsAsFactors=FALSE, header =TRUE)
+library(readxl)
+qtl <- read_excel("../Desktop/qtl.xlsx")
+qtl$Start <- as.integer(qtl$Start)
+qtl$End <- as.integer(qtl$End)
+
+qtl_final <- qtl %>% 
+  subset(is.na(qtl$Start)==F) %>%
+  dplyr::select(-Link) %>%
+  as.data.frame()
+
+
+chromPlot(gaps=mm10_gap, segment=qtl_final, noHist=TRUE, stack=TRUE, bands=mm10_cytoBandIdeo,chr = c(3,8,9,11))
+
+
+
+
+Phenotypes <- read_csv("new_qtls.csv")
+names(Phenotypes) <- c("Chrom","Start","End","Name")
+Phenotypes$Group <- "phenotypes"
+Phenotypes$Chrom <- as.numeric(Phenotypes$Chrom)
+all_merged <- bind_rows(qtl_final,Phenotypes)
+
+AIMS <- all_merged %>% 
+  subset(is.na(qtl$Start)==F) %>%
+  as.data.frame()
+names(AIMS)[5] <- "ID"
+
+
+
+chromPlot(gaps=mm10_gap, segment=all_merged, stat = AIMS, statCol="Value", statName="Value",statTyp="n", noHist=TRUE, stack=TRUE, bands=mm10_cytoBandIdeo)
+```

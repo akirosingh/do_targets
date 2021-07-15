@@ -14,3 +14,6 @@ data/prepared_data/pheno.csv
 data/prepared_data/phenotypes.rds
 _targets/objects/genofile
 _targets/objects/raw_genotypes
+_targets/objects/map
+_targets/objects/do_malaria
+_targets/objects/Xcovar
